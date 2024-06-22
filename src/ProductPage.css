@@ -1,0 +1,93 @@
+/* ProductPage.css */
+.product-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #CDD7E1;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .product-page__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CDD7E1;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .product-page__logo {
+    width: 250px;
+    height: auto;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding-top: 70px;
+  }
+  
+  .navbar__item::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  
+  .navbar__item:hover::after {
+    width: 100%;
+    background: green;
+  }
+  
+  .product-page__banner {
+    background-color: #0F283C;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    margin-top: 70px; 
+  }
+  
+  .product-page__title {
+    color: #08DDB8;
+    font-size: 27px;
+  }
+  
+  .product-page__description {
+    color: #CDD7E1;
+    font-size: 22px;
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+  
+  .product-page__footer {
+    background-color: #0F283C;
+    color: #08DDB8;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 19px;
+    margin-top: auto; /* Asegura que el pie de página esté en la parte inferior de la página */
+  }
+  
+  .footer__brand h1 {
+    font-size: 62px;
+    font-weight: bold;
+  }
+  
+  .footer__social-media h3,
+  .footer__contact h3 {
+    font-size: 19px;
+    margin-right: 100px;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  

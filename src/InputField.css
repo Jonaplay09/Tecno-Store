@@ -1,0 +1,29 @@
+/* InputField.css */
+.input-field {
+    position: relative;
+    width: 30%;
+    margin-bottom: 3px;
+  }
+  
+  .input-field__input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 10px; 
+    border: 4px solid #0F283C;
+    border-radius: 8px;
+    background-color: #3C6068;
+    color: #FFFFFF; 
+  }
+
+  ::placeholder { 
+    color: #FFFF; } 
+  
+  .input-field__icon {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 26px;
+    height: auto;
+  }

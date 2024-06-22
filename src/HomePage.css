@@ -1,0 +1,145 @@
+/* HomePage.css */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #CDD7E1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #CDD7E1;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.home-page__logo {
+  width: 250px;
+  height: auto;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 70px;
+}
+
+.navbar__item::after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.navbar__item:hover::after {
+  width: 100%;
+  background: green;
+}
+
+.home-page__banner {
+  background-color: #0F283C;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+.home-page__title {
+  color: #08DDB8;
+  font-size: 27px;
+}
+
+.home-page__description {
+  color: #CDD7E1;
+  font-size: 22px;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+.home-page__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -350px;  
+}
+
+.home-page__product-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px;
+  margin-right: 70px;
+  border: 3px solid #08DDB8;
+  box-sizing: border-box;
+}
+
+.home-page__products-section {
+  color: #4BA591;
+  font-size: 22px;
+  margin-top: 300px;
+  text-align: center;
+}
+
+.home-page__products-title {
+  font-size: 27px;
+}
+
+.home-page__footer {
+  background-color: #0F283C;
+  color: #08DDB8;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 19px;
+}
+
+.footer__brand h1 {
+  font-size: 62px;
+  font-weight: bold;
+}
+
+.footer__social-media h3,
+.footer__contact h3 {
+  font-size: 19px;
+  margin-right: 100px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.product-item {
+  border: 1px solid #0F283C;
+  background-color: #CDD7E1;
+  margin: 10px;
+  padding: 10px;
+}
+
+.product-item__nombre {
+  color: #4BA591;
+}
+
+.product-item__precio {
+  color: #4BA591;
+  float: left;
+}
+
+.product-item__fabricante {
+  color: #4BA591;
+  float: right;
+}
+
+.product-item__descripcion {
+  color: #0F283C;
+  clear: both;
+}

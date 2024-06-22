@@ -1,0 +1,12 @@
+/* Button.css */
+.button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    color: #0F283C;
+    background-color: #19C59E;
+    border: none;
+    border-radius: 66px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+  }

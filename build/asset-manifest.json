@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eba795f4.css",
+    "main.js": "/static/js/main.b592802a.js",
+    "static/media/speaker.jpg": "/static/media/speaker.875860b1e1da471bcc8e.jpg",
+    "static/media/phone.jpg": "/static/media/phone.522b2c0448c5025d88c9.jpg",
+    "static/media/laptop.jpeg": "/static/media/laptop.743949345ba5cbbf80f0.jpeg",
+    "static/media/eye_icon.png": "/static/media/eye_icon.bd542afb341f398671c7.png",
+    "static/media/twitter.png": "/static/media/twitter.594316a5fdc8e35104be.png",
+    "static/media/youtube.png": "/static/media/youtube.0cdb65587c19e7292c55.png",
+    "static/media/TECNO.png": "/static/media/TECNO.0571e17e162dc0765f41.png",
+    "static/media/tecnov.png": "/static/media/tecnov.980d25f9fee5dd6076b6.png",
+    "static/media/eye_closed.png": "/static/media/eye_closed.ca489b3b1d3ba2a6ef98.png",
+    "index.html": "/index.html",
+    "main.eba795f4.css.map": "/static/css/main.eba795f4.css.map",
+    "main.b592802a.js.map": "/static/js/main.b592802a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eba795f4.css",
+    "static/js/main.b592802a.js"
+  ]
+}
