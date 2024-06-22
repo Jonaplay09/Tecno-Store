@@ -71,7 +71,7 @@
     justify-content: space-between;
     padding: 20px;
     font-size: 19px;
-    margin-top: auto; /* Asegura que el pie de página esté en la parte inferior de la página */
+    margin-top: auto;
   }
   
   .footer__brand h1 {

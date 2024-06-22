@@ -61,7 +61,7 @@ app.put('/api/productos/:id', (req, res) => {
 
 // Ruta para eliminar un producto
 app.delete('/api/productos/:id', (req, res) => {
-  const query = 'DELETE FROM productos WHERE id = ?';
+  const query = 'DELETE FROM productos WHERE nombre = ?';
   db.query(query, [req.params.id], (error) => {
     if (error) {
       console.error(error);

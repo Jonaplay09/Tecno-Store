@@ -32,7 +32,7 @@ CREATE TABLE productos (
 );
 
 
--- cuenta admin por postman body raw http://localhost:5000/api/usuarios
+-- cuenta admin para poder registrar productos por postman body raw http://localhost:5000/api/usuarios
 /*
 {
   "username": "admin",

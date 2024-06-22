@@ -65,7 +65,7 @@ const Login = () => {
           localStorage.setItem('rol', data.usuario.rol);
           swal('Éxito', 'Inicio de sesión exitoso.', 'success')
             .then(() => {
-              navigate('/home'); // Redirige al usuario a la página de inicio
+              navigate('/HomePage'); // Redirige al usuario a la página de inicio
             })
             .catch(error => {
               console.error('Error:', error);

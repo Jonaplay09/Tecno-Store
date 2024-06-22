@@ -13,7 +13,7 @@ const ProductPage = () => {
     const rol = localStorage.getItem('rol'); 
 
     let menuItems = [
-      { label: 'Inicio', path: '/' },
+      { label: 'Inicio', path: '/HomePage' },
       { label: 'Cuenta', path: '/cuenta' },
       { label: 'Acerca de', path: '/acerca-de' },
     ];

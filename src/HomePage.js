@@ -15,25 +15,22 @@ const HomePage = () => {
   const rol = localStorage.getItem('rol');
   const [productos, setProductos] = useState([]);
   const [categorias, setCategorias] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:5000/api/categorias')
-      .then(response => response.json())
-      .then(data => setCategorias(data))
-      .catch(error => console.error('Error:', error));
-  }, []);
-
+  const [categoriaFiltro, setCategoriaFiltro] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:5000/api/productos')
       .then(response => response.json())
       .then(data => setProductos(data))
       .catch(error => console.error('Error:', error));
+
+    fetch('http://localhost:5000/api/categorias')
+      .then(response => response.json())
+      .then(data => setCategorias(data))
+      .catch(error => console.error('Error:', error));
   }, []);
 
-
   let menuItems = [
-    { label: 'Inicio', path: '/' },
+    { label: 'Inicio', path: '/HomePage' },
     { label: 'Cuenta', path: '/cuenta' },
     { label: 'Acerca de', path: '/acerca-de' },
   ];
@@ -45,6 +42,9 @@ const HomePage = () => {
   const scrollToProducts = () => {
     productsRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const productosFiltrados = productos.filter(producto => !categoriaFiltro || producto.categoria_id === Number(categoriaFiltro));
+
   return (
     <div className="home-page">
       <div className="main-content">
@@ -69,6 +69,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="home-page__products-section" id="productos-disponibles">
+          <h2 className="home-page__products-title">Productos Disponibles</h2>
           <select onChange={(e) => setCategoriaFiltro(e.target.value)}>
             <option value="">Todas las categorías</option>
             {categorias.map((categoria) => (
@@ -77,26 +78,20 @@ const HomePage = () => {
               </option>
             ))}
           </select>
-
-          <h2 className="home-page__products-title">Productos Disponibles</h2>
-          {productos.length > 0 ? (
-            productos
-              .filter(producto => !categoriaFiltro || producto.categoria_id === categoriaFiltro)
-              .map((producto) => (
-                <div className="product-item" key={producto.id}>
-                  <h3 className="product-item__nombre">{producto.nombre}</h3>
-                  <p className="product-item__precio">${producto.precio}</p>
-                  <p className="product-item__fabricante">{producto.fabricante}</p>
-                  <p className="product-item__descripcion">{producto.descripcion}</p>
-                  <Button>Comprar</Button>
-                </div>
-              ))
+          {productosFiltrados.length > 0 ? (
+            productosFiltrados.map((producto) => (
+              <div className="product-item" key={producto.id}>
+                <h3 className="product-item__nombre">{producto.nombre}</h3>
+                <p className="product-item__precio">${producto.precio}</p>
+                <p className="product-item__fabricante">{producto.fabricante}</p>
+                <p className="product-item__descripcion">{producto.descripcion}</p>
+                <Button>Comprar</Button>
+              </div>
+            ))
           ) : (
-            <p className="no-productos">No existen productos</p>
+            <p className="no-productos">No existen productos en esta categoría</p>
           )}
-
         </div>
-
       </div>
       <footer className="home-page__footer">
         <div className="footer__brand">

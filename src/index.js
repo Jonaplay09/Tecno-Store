@@ -13,7 +13,7 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/HomePage" element={<HomePage />} />
         <Route path="/productos" element={<ProductPage />} /> 
         <Route path="/register-product" element={<RegisterProductPage/>} />
         <Route path="/delete-product" element={<DeleteProductPage/>} />

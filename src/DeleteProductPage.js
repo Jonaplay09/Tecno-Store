@@ -7,6 +7,8 @@ import logo from './tecnov.png';
 import twitterIcon from './twitter.png';
 import facebookIcon from './facebook.png';
 import youtubeIcon from './youtube.png';
+import swal from 'sweetalert';
+
 
 const DeleteProductPage = () => {
   const [nombre, setNombre] = useState('');
@@ -14,7 +16,7 @@ const DeleteProductPage = () => {
   const rol = localStorage.getItem('rol'); 
 
   let menuItems = [
-    { label: 'Inicio', path: '/' },
+    { label: 'Inicio', path: '/HomePage' },
     { label: 'Cuenta', path: '/cuenta' },
     { label: 'Acerca de', path: '/acerca-de' },
   ];
@@ -24,9 +26,26 @@ const DeleteProductPage = () => {
   }   
 
   const handleDelete = () => {
-
+    fetch(`http://localhost:5000/api/productos/${nombre}`, {
+      method: 'DELETE',
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.id) {
+          console.log('Producto eliminado con éxito:', data);
+          swal('Éxito', 'Producto eliminado con éxito.', 'success');
+        } else {
+          console.error('Error al eliminar el producto:', data);
+          swal('Error', 'Error al eliminar el producto. Por favor, intenta de nuevo.', 'error');
+        }
+      })
+      .catch(error => {
+        // Maneja cualquier error de red
+        console.error('Error de red:', error);
+        swal('Error', 'Error de red. Por favor, verifica tu conexión a internet e intenta de nuevo.', 'error');
+      });
   };
-
+  
   return (
     <div className="product-page">
       <header className="product-page__header">
